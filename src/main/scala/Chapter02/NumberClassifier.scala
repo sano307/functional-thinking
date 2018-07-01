@@ -12,8 +12,12 @@ object NumberClassifier extends App {
     Seq.range(1, number + 1)
       .filter(potential => number % potential == 0)
 
+  def sumFactors(number: Int): Int =
+    factorsOf(number).reduce(_ + _)
+
   def aliquotSum(number: Int): Int =
-    factorsOf(number).sum - number
+    //factorsOf(number).sum - number
+    sumFactors(number) - number
 
   def isPerfect(number: Int): Boolean =
     aliquotSum(number) == number
