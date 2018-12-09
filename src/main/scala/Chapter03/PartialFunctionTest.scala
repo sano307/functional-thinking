@@ -1,6 +1,6 @@
 package Chapter03
 
-object PartialFunctionTest extends App {
+object PartialFunction extends App {
 
   def price(product: String): Double =
     product match {

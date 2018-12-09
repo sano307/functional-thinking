@@ -2,7 +2,7 @@ package Chapter04
 
 import scala.collection.mutable.{Map => MutableMap}
 
-object MemorizationTest extends App {
+object Memorization extends App {
 
   def memorize[A, B](f: A => B) = new (A => B) {
     val cache: MutableMap[A, B] = MutableMap[A, B]()

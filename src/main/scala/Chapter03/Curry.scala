@@ -1,6 +1,6 @@
 package Chapter03
 
-object CurryTest extends App {
+object Curry extends App {
 
   def filter(xs: List[Int], p: Int => Boolean): List[Int] =
     if (xs.isEmpty) xs
@@ -10,6 +10,7 @@ object CurryTest extends App {
   def modN(n: Int)(x: Int) = (x % n) == 0
 
   val nums = List(1, 2, 3, 4, 5, 6, 7, 8)
+
   println(filter(nums, modN(2)))  // List(2, 4, 6, 8)
   println(filter(nums, modN(3)))  // List(3, 6)
 }

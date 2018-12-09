@@ -2,7 +2,7 @@ package Chapter03
 
 import scala.annotation.tailrec
 
-object RecursionTest extends App {
+object Recursion extends App {
 
   def numbers: List[Int] = List(
     6, 28, 4, 9, 12,
