@@ -24,6 +24,9 @@ lazy val commonSettings = Seq(
 lazy val root = (project in file("root"))
   .settings(commonSettings)
 
+lazy val herdingCats = (project in file("herding-cats"))
+  .settings(commonSettings)
+
 lazy val library = 
   new {
     object Version {

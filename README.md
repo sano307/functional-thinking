@@ -13,5 +13,13 @@
 About the way of thinking about functional programming.
 
 ```shell
-sbt "runMain {CHAPTER_DIRECTORY}.{THEME_FILE}"
+sbt "root/runMain {CHAPTER_DIRECTORY}.{THEME_FILE}"
+```
+
+### herding-cats
+
+About the abstractions library for functional programming named the Cats.
+
+```shell
+sbt "herdingCats/runMain {CHAPTER_DIRECTORY}.{THEME_FILE}"
 ```
