@@ -13,7 +13,9 @@ lazy val commonSettings = Seq(
     "-feature",
     "-unchecked",
     "-Ypartial-unification",
-    "-target:jvm-1.8"
+    "-language:implicitConversions",
+    "-language:higherKinds",
+    "-target:jvm-1.8",
   ),
   resolvers += "Sonatype Releases" at "https://oss.sonatype.org/content/repositories/releases/",
   libraryDependencies ++= Seq(
@@ -25,7 +27,13 @@ lazy val root = (project in file("root"))
   .settings(commonSettings)
 
 lazy val herdingCats = (project in file("herding-cats"))
-  .settings(commonSettings)
+  .settings(
+    commonSettings,
+    libraryDependencies ++= Seq(
+      library.simulacrum
+    ),
+    addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+  )
 
 lazy val library = 
   new {
@@ -33,4 +41,5 @@ lazy val library =
       val cats = "1.1.0"
     }
     val catsCore = "org.typelevel" %% "cats-core" % Version.cats
+    val simulacrum = "com.github.mpilquist" %% "simulacrum" % "0.18.0"
   }
