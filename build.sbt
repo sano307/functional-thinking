@@ -21,7 +21,7 @@ lazy val commonSettings = Seq(
   )
 )
 
-lazy val functionalThinking = (project in file("functional-thinking"))
+lazy val root = (project in file("root"))
   .settings(commonSettings)
 
 lazy val library = 
