@@ -1,4 +1,4 @@
-package Chapter03
+package chapter03
 
 case class Counter() {
   var cnt: Int = 0

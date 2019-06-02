@@ -1,4 +1,4 @@
-package Chapter03
+package chapter03
 
 object PartialFunction extends App {
 

@@ -1,4 +1,4 @@
-package Chapter03
+package chapter03
 
 case class Employee(name: String, salary: Int) {
   def paidMore(amount: Int): Boolean =

@@ -1,4 +1,4 @@
-package Chapter04
+package chapter04
 
 import scala.collection.mutable.{Map => MutableMap}
 

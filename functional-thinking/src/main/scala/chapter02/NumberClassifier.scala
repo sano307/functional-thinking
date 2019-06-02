@@ -1,4 +1,4 @@
-package Chapter02
+package chapter02
 
 object NumberClassifier extends App {
 

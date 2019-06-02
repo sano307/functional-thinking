@@ -1,4 +1,4 @@
-package Chapter01
+package chapter01
 
 object IndexOfAny extends App {
 
